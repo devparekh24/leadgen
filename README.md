@@ -25,7 +25,7 @@ An **AI-Powered Lead Intelligence Dashboard** — a full-stack tool that goes be
 
 The challenge asked for a tool that "could help a company in the most effective way possible." Lead scraping alone is commoditized — the real value is **knowing which leads to pursue first**. The AI scoring engine transforms raw data into prioritized action, reducing time-to-qualified-lead by focusing sales teams on Hot (80+) leads.
 
-This aligns directly with Caprae's thesis: **practical AI solutions that improve decision-making and create lasting value**.
+This aligns directly thesis: **practical AI solutions that improve decision-making and create lasting value**.
 
 ---
 
