@@ -1,6 +1,5 @@
 # 🦎 SaaSquatch Leads — AI-Powered Lead Intelligence Dashboard
 
-> **Caprae Capital Partners** — Full Stack Developer Pre-Work Submission  
 > Built to enhance the [SaaSquatch Leads](https://www.saasquatchleads.com/) lead generation platform
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)
