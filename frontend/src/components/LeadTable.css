@@ -1,0 +1,144 @@
+.table-container {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  width: 100%;
+}
+
+.lead-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.lead-table th, .lead-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--card-border);
+  white-space: nowrap;
+}
+
+.lead-table th {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  user-select: none;
+}
+
+.lead-table th:hover {
+  color: var(--text-primary);
+}
+
+.lead-table th display {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.lead-table tbody tr {
+  transition: all 0.2s ease;
+}
+
+.lead-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: inset 0 0 20px rgba(20, 184, 166, 0.05);
+}
+
+.selected-row {
+  background: rgba(20, 184, 166, 0.08) !important;
+}
+
+.checkbox-cell {
+  width: 40px;
+  padding-right: 0 !important;
+}
+
+.custom-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent-primary);
+  cursor: pointer;
+}
+
+.industry-tag {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+.actions-cell {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--accent-primary);
+}
+
+.delete-btn:hover {
+  color: var(--score-cold);
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.bulk-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: rgba(20, 184, 166, 0.1);
+  border-bottom: 1px solid var(--card-border);
+}
+
+.bulk-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.pagination-select {
+  padding: 6px 12px;
+  font-size: 0.875rem;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
