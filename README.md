@@ -217,12 +217,3 @@ leadgen-scraping-tool/
 - **A/B Email Testing**: Test multiple outreach variations per lead segment
 
 ---
-
-## 👤 Author
-
-**Sainath** — Full Stack Developer  
-Built with ❤️ for the Caprae Capital interview process
-
----
-
-*"To become a legend, you must take down legends."* — Caprae Capital
