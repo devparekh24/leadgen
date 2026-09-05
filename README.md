@@ -3,8 +3,8 @@
 > Built to enhance the [SaaSquatch Leads](https://www.saasquatchleads.com/) lead generation platform
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.104-009688?logo=fastapi)
-![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python)
+![Node.js](https://img.shields.io/badge/Node.js-20+-339933?logo=nodedotjs)
+![Express](https://img.shields.io/badge/Express.js-4.x-black?logo=express)
 ![SQLite](https://img.shields.io/badge/SQLite-3-003B57?logo=sqlite)
 
 ---
@@ -44,7 +44,7 @@ This aligns directly thesis: **practical AI solutions that improve decision-maki
 └──────────────────────┼───────────────────────────────┘
                        │
 ┌──────────────────────┼───────────────────────────────┐
-│              FastAPI Backend                          │
+│              Node.js Backend                          │
 │  ┌──────────┐ ┌──────────┐ ┌───────────────────────┐ │
 │  │ Scraper  │ │  Scorer  │ │   Email Generator     │ │
 │  │ Service  │ │  Engine  │ │   (AI + Templates)    │ │
@@ -67,7 +67,7 @@ This aligns directly thesis: **practical AI solutions that improve decision-maki
 |-------|-----------|-----|
 | **Frontend** | Next.js 14, React 18, TypeScript | Matches SaaSquatch's stack; SSR; modern React patterns |
 | **Styling** | Vanilla CSS with CSS Custom Properties | Full control over premium dark-mode aesthetic |
-| **Backend** | Python 3.11+, FastAPI | Async-first, fast development, excellent for scraping |
+| **Backend** | Node.js, Express, TypeScript | High performance, unified JS/TS ecosystem |
 | **Database** | SQLite (dev) / PostgreSQL (prod) | Zero-config for demo; production-ready upgrade path |
 | **AI** | OpenAI GPT-4o-mini (optional) | Lead scoring rationale + email generation |
 | **Charts** | Recharts | Lightweight, composable, dark-theme ready |
@@ -81,7 +81,7 @@ This aligns directly thesis: **practical AI solutions that improve decision-maki
 
 ### Hosting Architecture
 - **Frontend**: Vercel (static + SSR, free tier)
-- **Backend**: Railway / Render (serverless FastAPI, free tier)
+- **Backend**: Railway / Render (Node.js API, free tier)
 - **Database**: Bundled SQLite or Railway PostgreSQL
 
 ---
@@ -90,7 +90,6 @@ This aligns directly thesis: **practical AI solutions that improve decision-maki
 
 ### Prerequisites
 - Node.js 18+ and npm
-- Python 3.11+ and pip
 
 ### 1. Clone the Repository
 ```bash
@@ -101,10 +100,10 @@ cd leadgen-scraping-tool
 ### 2. Start the Backend
 ```bash
 cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload --port 8000
+npm install
+npm run dev
 ```
-The API will be available at `http://localhost:8000` with docs at `http://localhost:8000/docs`
+The API will be available at `http://localhost:8000`
 
 ### 3. Start the Frontend
 ```bash
@@ -134,8 +133,6 @@ cp .env.example .env
 | `GET` | `/api/export?format=csv` | Export leads to CSV or Excel |
 | `GET` | `/api/analytics` | Dashboard analytics data |
 | `DELETE` | `/api/leads/{id}` | Delete a lead |
-
-Full Swagger docs available at `http://localhost:8000/docs`
 
 ---
 
@@ -174,15 +171,16 @@ Each factor is normalized to 0-100 and combined into a weighted composite score:
 ```
 leadgen-scraping-tool/
 ├── backend/
-│   ├── main.py                 # FastAPI application
-│   ├── database.py             # SQLAlchemy + SQLite
-│   ├── models.py               # Pydantic + ORM models
-│   ├── requirements.txt        # Python dependencies
-│   ├── data/                   # SQLite database (auto-created)
-│   └── services/
-│       ├── scraper.py          # Lead scraping engine
-│       ├── scorer.py           # AI scoring engine
-│       └── email_generator.py  # Email generation
+│   ├── src/
+│   │   ├── index.ts            # Express application entry
+│   │   ├── database.ts         # Prisma / SQLite connection
+│   │   ├── routes/             # API routes
+│   │   └── services/
+│   │       ├── scraper.ts      # Lead scraping engine
+│   │       ├── scorer.ts       # AI scoring engine
+│   │       └── email.ts        # Email generation
+│   ├── package.json            # Node dependencies
+│   └── prisma/                 # Database schema
 ├── frontend/
 │   ├── src/
 │   │   ├── app/
