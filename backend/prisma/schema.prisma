@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./data/leads.db"
+}
+
+model Lead {
+  id                Int      @id @default(autoincrement())
+  company_name      String
+  industry          String
+  location          String
+  website           String?
+  phone             String?
+  email             String?
+  owner_name        String?
+  employee_count    Int?
+  estimated_revenue Float?
+  linkedin_url      String?
+  score             Float?
+  score_tier        String?
+  score_rationale   String?
+  scraped_at        DateTime @default(now())
+  source            String?
+  is_enriched       Boolean  @default(false)
+  pipeline_stage    String?  @default("Prospect")
+
+  @@index([company_name])
+  @@index([industry])
+}
