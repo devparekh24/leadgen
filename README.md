@@ -1,6 +1,5 @@
 # 🦎 SaaSquatch Leads — AI-Powered Lead Intelligence Dashboard
 
-> **Caprae Capital Partners** — Full Stack Developer Pre-Work Submission  
 > Built to enhance the [SaaSquatch Leads](https://www.saasquatchleads.com/) lead generation platform
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)
@@ -26,7 +25,7 @@ An **AI-Powered Lead Intelligence Dashboard** — a full-stack tool that goes be
 
 The challenge asked for a tool that "could help a company in the most effective way possible." Lead scraping alone is commoditized — the real value is **knowing which leads to pursue first**. The AI scoring engine transforms raw data into prioritized action, reducing time-to-qualified-lead by focusing sales teams on Hot (80+) leads.
 
-This aligns directly with Caprae's thesis: **practical AI solutions that improve decision-making and create lasting value**.
+This aligns directly thesis: **practical AI solutions that improve decision-making and create lasting value**.
 
 ---
 
@@ -217,12 +216,3 @@ leadgen-scraping-tool/
 - **A/B Email Testing**: Test multiple outreach variations per lead segment
 
 ---
-
-## 👤 Author
-
-**Sainath** — Full Stack Developer  
-Built with ❤️ for the Caprae Capital interview process
-
----
-
-*"To become a legend, you must take down legends."* — Caprae Capital
