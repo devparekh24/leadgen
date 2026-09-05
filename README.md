@@ -5,7 +5,8 @@
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)
 ![Node.js](https://img.shields.io/badge/Node.js-20+-339933?logo=nodedotjs)
 ![Express](https://img.shields.io/badge/Express.js-4.x-black?logo=express)
-![SQLite](https://img.shields.io/badge/SQLite-3-003B57?logo=sqlite)
+![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?logo=prisma)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-4169E1?logo=postgresql)
 
 ---
 
@@ -68,7 +69,7 @@ This aligns directly thesis: **practical AI solutions that improve decision-maki
 | **Frontend** | Next.js 14, React 18, TypeScript | Matches SaaSquatch's stack; SSR; modern React patterns |
 | **Styling** | Vanilla CSS with CSS Custom Properties | Full control over premium dark-mode aesthetic |
 | **Backend** | Node.js, Express, TypeScript | High performance, unified JS/TS ecosystem |
-| **Database** | SQLite (dev) / PostgreSQL (prod) | Zero-config for demo; production-ready upgrade path |
+| **Database** | PostgreSQL + Prisma ORM | Type-safe database queries and migrations |
 | **AI** | OpenAI GPT-4o-mini (optional) | Lead scoring rationale + email generation |
 | **Charts** | Recharts | Lightweight, composable, dark-theme ready |
 | **Export** | SheetJS (xlsx) | Industry-standard CSV/Excel generation |
@@ -82,7 +83,7 @@ This aligns directly thesis: **practical AI solutions that improve decision-maki
 ### Hosting Architecture
 - **Frontend**: Vercel (static + SSR, free tier)
 - **Backend**: Railway / Render (Node.js API, free tier)
-- **Database**: Bundled SQLite or Railway PostgreSQL
+- **Database**: Render PostgreSQL
 
 ---
 
@@ -172,15 +173,15 @@ Each factor is normalized to 0-100 and combined into a weighted composite score:
 leadgen-scraping-tool/
 ├── backend/
 │   ├── src/
-│   │   ├── index.ts            # Express application entry
-│   │   ├── database.ts         # Prisma / SQLite connection
-│   │   ├── routes/             # API routes
-│   │   └── services/
+│   │   ├── server.ts           # Express application entry
+│   │   ├── db.ts               # Database connection
+│   │   ├── services/
 │   │       ├── scraper.ts      # Lead scraping engine
 │   │       ├── scorer.ts       # AI scoring engine
 │   │       └── email.ts        # Email generation
 │   ├── package.json            # Node dependencies
-│   └── prisma/                 # Database schema
+│   └── prisma/                 # Prisma schema & migrations
+│       └── schema.prisma       # Database schema definition
 ├── frontend/
 │   ├── src/
 │   │   ├── app/
