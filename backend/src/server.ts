@@ -24,7 +24,7 @@ app.get('/', (req: Request, res: Response) => {
 app.post('/api/scrape', (req: Request, res: Response) => {
   try {
     const mockResults = scrapeLeads(req.body);
-    const savedLeads = [];
+    const savedLeads: any[] = [];
     
     const stmt = db.prepare(`
       INSERT INTO leads (
