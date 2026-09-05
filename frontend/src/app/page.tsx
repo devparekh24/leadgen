@@ -74,8 +74,6 @@ export default function Dashboard() {
 
   return (
     <div className="app-layout">
-      <Navbar />
-
       {/* Toast notification */}
       {notification && (
         <div className="toast-notification">
